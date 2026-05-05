@@ -17,8 +17,8 @@ body {
     height: 100vh;
     width: 100vw;
 
-    grid-template-columns: 100px 1fr 300px;
-    grid-template-rows: 160px 1fr;
+    grid-template-columns: 160px 1fr 350px;
+    grid-template-rows: 230px 1fr;
     grid-template-areas: 
     "nav logo lead"
     "nav play lead";
@@ -41,7 +41,7 @@ body {
 }
 
 .logo{
-    height: 160px;
+    height: 230px;
 }
 
 /*----- Sidebar -----*/
@@ -80,11 +80,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 0px 0px 0px;
     background-color: rgba(0,0,0,0.5);
     border-left: 2px solid rgba(255,255,255,0.1);
 }
 .leaderboard{
+    scale: 1.1;
     display: grid;
 
     grid-template-columns: 1fr;
@@ -95,7 +96,7 @@ body {
 
     width: 280px;
     border: 2px solid rgba(255,255,255,0.1);
-    border-radius: 5px;
+    border-radius: 10px;
     flex-direction: column;
     background-color: rgba(0,0,0,0.6);
     gap: 3px;
@@ -118,25 +119,29 @@ body {
 }
 .first-place{
     display: flex;
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 5px solid #FFD700;
+    border-radius: 10px;
     padding: 10px 20px 10px 20px;
     gap: 20px;
 }
 .second-place{
     display: flex;
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 3px solid #C0C0C0;
+    border-radius: 10px;
     padding: 10px 20px 10px 20px;
     gap: 20px;
 }
 .third-place{
     display: flex;
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 3px solid #CE8946;
+    border-radius: 10px;
     padding: 10px 20px 10px 20px;
     gap: 20px;
 }
 .nonspecial{
     display: flex;
     border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
     padding: 10px 20px 10px 20px;
     gap: 20px;
 }
@@ -144,6 +149,7 @@ body {
 
 /*----- Buttons -----*/
 .play-button {
+    scale: 1.5;
     border: none;
     background-color: transparent;
     font-family: Impact;
@@ -152,12 +158,12 @@ body {
     font-size: 3rem;
     animation: pulse 1.5s infinite;
     cursor: pointer;
-    color: #698362;
+    color: #7bbf69;
 }
 .play-button:hover{
     animation: pulse 0.3s infinite;
-    scale: 1.2;
-    color: #6b965f;
+    scale: 1.7;
+    color: #7bbf69;
 }
 @keyframes pulse {
   0% { transform: scale(1); opacity: 0.9; }
@@ -167,19 +173,19 @@ body {
 
 .side-button{
     padding: 5px;
-    background-color: #5d7656;
-    color: #536f53;
-    scale: 1.0;
-    border: none;
+    background-color: transparent;
+    color: #7bbf69;
+    scale: 1.5;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
     border-radius: 5px;
     font-family: Impact;
     text-shadow: 5px 5px 5px rgba(0,0,0,1);
     -webkit-text-stroke: 1px black;
     font-size: 1.8rem;
     cursor: pointer;
-    color: #698362;
 }
 .side-button:hover{
-    background-color: #6b965f;
-    scale: 1.2;
+    background-color: #7bbf69;
+    scale: 1.7;
 }
