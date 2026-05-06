@@ -55,9 +55,6 @@ body {
     gap: 20px;
     border-right: 2px solid rgba(255,255,255,0.1);
 }
-.icon{
-    font-size: 1.7rem;
-}
 
 
 /*----- CenterContent -----*/
@@ -159,6 +156,7 @@ body {
     animation: pulse 1.5s infinite;
     cursor: pointer;
     color: #7bbf69;
+    transition: scale 0.3s ease-in-out;
 }
 .play-button:hover{
     animation: pulse 0.3s infinite;
