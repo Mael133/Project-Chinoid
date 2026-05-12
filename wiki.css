@@ -1,0 +1,128 @@
+
+/*----- WIKI -----*/
+/* permite overflow para rodar a tela e seleção de texto*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wiki-body {
+    overflow-y: auto;
+    user-select: text;
+}
+
+.wiki-container {
+    display: grid;
+    min-height: 100vh;
+    width: 100vw;
+
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-rows: 230px 1fr;
+    grid-template-areas: 
+    "wheader wheader wheader"
+    "wnav w-main w-guides";
+    
+    background-image: url('images/menu-backgroud.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*----- wiki header -----*/
+.wiki-header {
+    grid-area: wheader;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    height:fit-content;
+    align-items: center; 
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.wiki-logo {
+    height: 230px;
+}
+
+/* ----- wiki sidebar nav ----- */
+.wiki-sidebar-nav {
+    grid-area: wnav;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    gap: 20px;
+    border-right: 2px solid rgba(255,255,255,0.1);
+}
+
+/* ----- wiki main content ----- */
+.wiki-main-content {
+    grid-area: w-main;
+    padding: 30px;
+
+}
+
+/* ----- wiki guides ----- */
+.wiki-guides-panel {
+    grid-area: w-guides;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    gap: 20px;
+    border-left: 2px solid rgba(255,255,255,0.1);
+}
+
+/* ----- estilização das caixas de texto da wiki ----- */
+.wiki-box{
+    background-color: rgba(0,0,0,0.9);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.wiki-box h1, .wiki-box h2, .wiki-box h3 {
+    color: #7bbf69;
+    font-family: Impact;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,1);
+}
+
+/* configuração das listas das caixas da wiki*/
+.wiki-box ul {
+    list-style: none;
+}
+
+.wiki-box ul li { margin-bottom: 10px; }
+
+.wiki-box a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.wiki-box a:hover {
+    color: #7bbf69;
+}
+
+/* configurações das tabelas da wiki */
+.wiki-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.wiki-table th, .wiki-table td {
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+}
+
+.wiki-table th {
+    background-color: rgba(123, 191, 105, 0.2);
+    color: #7bbf69;
+}
