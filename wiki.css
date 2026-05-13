@@ -92,7 +92,7 @@ body {
     border: 2px solid rgba(255,255,255,0.1);
 }
 
-.wiki-box h1, .wiki-box h2, .wiki-box h3 {
+.wiki-box h1, .wiki-box h2, .wiki-box h3{
     color: #7bbf69;
     font-family: Impact;
     margin-bottom: 15px;
@@ -152,4 +152,34 @@ body {
 .wiki-button:hover{
     background-color: #7bbf69;
     scale: 1;
+}
+
+/* ----- configurações do formulário ----- */
+form{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+fieldset {
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+legend {
+    color: #7bbf69;
+    font-family: Impact;
+    margin-top: 5px;
+    text-shadow: 5px 5px 5px rgba(0,0,0,1);
+    padding: 0 5px;
+}
+
+label{
+    margin-left: 15px;
+}
+
+input{
+    background-color: transparent;
+    color:rgb(255, 255, 255);
 }

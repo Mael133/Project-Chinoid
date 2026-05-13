@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - Project Chinoid</title>
+    <link rel="stylesheet" href="wiki.css">
+</head>
+<body class="wiki-body">
+<div class="wiki-container">
+    <header class="wiki-header">
+        <img class="wiki-logo" src="images/logo.png" alt="Project Chinoid Logo">
+    </header>
+
+    <nav class="wiki-sidebar-nav">
+        <div class="wiki-box">
+            <h3>Explorar</h3>
+            <ul>
+                <li><a href="wiki.html">Início</a></li>
+                <li><a href="#">Personagens</a></li>
+                <li><a href="#">Itens</a></li>
+                <li><a href="#">Inimigos</a></li>
+                <li><a href="#">Mecânicas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wiki-main-content">
+        <div class="wiki-box">
+            <h1>Guias da Comunidade</h1>
+            <p>Bem-vindo a sessão de guias da comunidade da wiki de <strong>Project Chinoid</strong>.
+                Aqui você encontrará os mais variados guias de jogo, criados pelos próprios jogadores!</p>
+            
+            <h2>Você também pode contribuir!</h2>
+            <p>Acha que é <strong>bom o suficiente?</strong> Então que tal compartilhar parte do seu conhecimento 
+                e habilidades sinistras em <strong>Project Chinoid</strong> com o resto da galera? É só preencher
+                o formulário logo abaixo!</p>
+            
+            <form action="cadastro_guia" method="post">
+                <fieldset>
+                    <legend>Insira as informações do seu guia</legend>
+                    <br>
+                    <div>
+                        <label for="titulo"><strong>Título:</strong></label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Título do guia aqui..." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="artigo"><strong>Artigo:</strong></label>
+                        <input type="text" id="artigo" name="artigo" placeholder="Escreva o guia aqui..." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="autor"><strong>Autor:</strong></label>
+                        <input type="text" id="autor" name="autor" placeholder="Autor do guia aqui..." required>
+                    </div>
+                    <br>
+                    <div>
+                        <button class="wiki-button" type="submit" style="margin-bottom: 5px; margin-left: 5px;">Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <div class="wiki-guides-panel">
+        <div class="wiki-box">
+            <h3>Guias da Comunidade</h3>
+            <ul>
+                <li><a href="#">Guia para Iniciantes</a></li>
+                <li><a href="#">Melhores Builds</a></li>
+                <li><a href="#">RNG de Itens</a></li>
+                <li><a href="#">Boss Fights</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
