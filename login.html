@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki - Project Chinoid</title>
+    <link rel="stylesheet" href="wiki.css">
+</head>
+<body class="wiki-body">
+<div class="wiki-container">
+    <header class="wiki-header">
+        <img class="wiki-logo" src="images/logo.png" alt="Project Chinoid Logo">
+    </header>
+    <main class="wiki-main-content">
+        <div class="wiki-box">
+            <form action="cadastro_guia" method="post">
+                <fieldset>
+                    <legend><h1>Insira suas credenciais</h1></legend>
+                    <br>
+                    <div>
+                        <label for="Nickname"><strong>Nickname:</strong></label>
+                        <input type="text" id="Nickname" name="Nickname" placeholder="nomeDaConta..." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="Email"><strong>Email:</strong></label>
+                        <input type="text" id="Email" name="Email" placeholder="exemplo@email.com" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="Senha"><strong>Senha:</strong></label>
+                        <input type="text" id="Senha" name="Senha" placeholder="..." required>
+                    </div>
+                    <br>
+                    <div>
+                        <button class="wiki-button" type="submit" style="margin-bottom: 5px; margin-left: 5px;">Entrar</button>
+                        <button class="wiki-button" type="submit" style="margin-bottom: 5px; margin-left: 5px;">Criar Conta</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</div>
+</body>
+</html>
