@@ -15,7 +15,6 @@ body {
   user-select: none;
 }
 
-
 .wiki-body {
     overflow-y: auto;
     user-select: text;
@@ -134,4 +133,23 @@ body {
 .wiki-table th {
     background-color: rgba(123, 191, 105, 0.2);
     color: #7bbf69;
+}
+
+.wiki-button{
+    padding: 5px;
+    background-color: transparent;
+    color: #7bbf69;
+    scale: 0.9;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 5px;
+    font-family: Impact;
+    text-shadow: 5px 5px 5px rgba(0,0,0,1);
+    -webkit-text-stroke: 1px black;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.wiki-button:hover{
+    background-color: #7bbf69;
+    scale: 1;
 }
