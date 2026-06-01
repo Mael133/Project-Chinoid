@@ -182,4 +182,21 @@ label{
 input{
     background-color: transparent;
     color:rgb(255, 255, 255);
+    margin-left: 5px;
+}
+
+textarea{
+    background-color: transparent;
+    color:rgb(255, 255, 255);
+}
+
+form div:has(#artigo) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+}
+
+#artigo {
+    resize: none;
+    margin-left: 10px;
 }
