@@ -160,11 +160,13 @@ form{
     padding: 20px;
     border-radius: 8px;
     border: 2px solid rgba(255,255,255,0.1);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 fieldset {
     border-radius: 8px;
     border: 2px solid rgba(255,255,255,0.1);
+    padding: 20px;
 }
 
 legend {
@@ -172,22 +174,33 @@ legend {
     font-family: Impact;
     margin-top: 5px;
     text-shadow: 5px 5px 5px rgba(0,0,0,1);
-    padding: 0 5px;
+    font-size: 1.6rem;
+    padding: 0 10px;
 }
 
-label{
-    margin-left: 15px;
+input, textarea {
+    margin-top: 3px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input{
-    background-color: transparent;
-    color:rgb(255, 255, 255);
-    margin-left: 5px;
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #7bbf69;
+    box-shadow: 0 0 5px rgba(123, 191, 105, 0.5);
 }
 
-textarea{
-    background-color: transparent;
-    color:rgb(255, 255, 255);
+input:focus:invalid:not(:placeholder-shown), 
+textarea:focus:invalid:not(:placeholder-shown) {
+    border-color: #ff4a4a;
+    box-shadow: 0 0 5px rgba(255, 74, 74, 0.5);
 }
 
 form div:has(#artigo) {
@@ -199,4 +212,32 @@ form div:has(#artigo) {
 #artigo {
     resize: none;
     margin-left: 10px;
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.form-redirect {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-redirect a {
+    color: #7bbf69;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.form-redirect a:hover {
+    color: #92e07d;
 }
