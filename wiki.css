@@ -241,3 +241,74 @@ form div:has(#artigo) {
 .form-redirect a:hover {
     color: #92e07d;
 }
+
+/* ----- configurações do sistema de gerenciamento de conta ----- */
+.tab-label {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    padding: 5px 0;
+}
+
+.tab-label:hover {
+    color: #7bbf69;
+}
+
+.account-tab-content {
+    display: none;
+}
+
+#tab-inicio-input:checked ~ .wiki-container #content-inicio { display: block; }
+#tab-config-input:checked ~ .wiki-container #content-config { display: block; }
+#tab-guias-input:checked ~ .wiki-container #content-guias { display: block; }
+#tab-ranking-input:checked ~ .wiki-container #content-ranking { display: block; }
+
+#tab-inicio-input:checked ~ .wiki-container #label-inicio,
+#tab-config-input:checked ~ .wiki-container #label-config,
+#tab-guias-input:checked ~ .wiki-container #label-guias,
+#tab-ranking-input:checked ~ .wiki-container #label-ranking {
+    color: #7bbf69;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(123, 191, 105, 0.6);
+}
+
+.action-btn {
+    padding: 6px 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+    margin: 0 4px;
+}
+
+.edit-btn {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.edit-btn:hover {
+    background-color: rgba(123, 191, 105, 0.2);
+    border-color: #7bbf69;
+    color: #7bbf69;
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 74, 74, 0.15);
+    border-color: #ff4a4a;
+    color: #ff4a4a;
+}
+
+.action-btn:active {
+    transform: scale(0.96);
+}
