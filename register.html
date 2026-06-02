@@ -45,5 +45,22 @@
         </div>
     </main>
 </div>
+
+<script>
+    const senha = document.getElementById("Senha");
+    const confirmarSenha = document.getElementById("Senharep");
+
+    function validarSenhas() {
+        if (senha.value !== confirmarSenha.value) {
+            confirmarSenha.setCustomValidity("As senhas precisam ser iguais!");
+        } else {
+            confirmarSenha.setCustomValidity(""); 
+        }
+    }
+
+    senha.addEventListener('change', validarSenhas);
+    confirmarSenha.addEventListener('keyup', validarSenhas);
+</script>
+
 </body>
 </html>
