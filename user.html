@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Conta - Project Chinoid</title>
+    <link rel="stylesheet" href="wiki.css">
+</head>
+<body class="wiki-body">
+
+    <input type="radio" name="account-tabs" id="tab-inicio-input" checked style="display: none;">
+    <input type="radio" name="account-tabs" id="tab-config-input" style="display: none;">
+    <input type="radio" name="account-tabs" id="tab-guias-input" style="display: none;">
+    <input type="radio" name="account-tabs" id="tab-ranking-input" style="display: none;">
+
+    <div class="wiki-container">
+        <header class="wiki-header">
+            <img class="wiki-logo" src="images/logo.png" alt="Project Chinoid Logo">
+        </header>
+
+        <nav class="wiki-sidebar-nav">
+            <div class="wiki-box">
+                <h3>Minha Conta</h3>
+                <ul>
+                    <li><label for="tab-inicio-input" class="tab-label" id="label-inicio">Início</label></li>
+                    <li><label for="tab-config-input" class="tab-label" id="label-config">Configurações</label></li>
+                    <li><label for="tab-guias-input" class="tab-label" id="label-guias">Meus Guias</label></li>
+                    <li><label for="tab-ranking-input" class="tab-label" id="label-ranking">Ranking Global</label></li>
+                    <li style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
+                        <a href="index.html">← Voltar ao Jogo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="wiki-main-content">
+            
+            <section class="account-tab-content" id="content-inicio">
+                <div class="wiki-box">
+                    <h1>Status do Jogador</h1>
+                    <p>Confira o seu progresso atual e estatísticas de combate em <strong>Project Chinoid</strong>.</p>
+                    
+                    <table class="wiki-table">
+                        <thead>
+                            <tr>
+                                <th>Estatística</th>
+                                <th>Valor Atual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Nível do Personagem</strong></td>
+                                <td>Nível 42</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mundos Explorados</strong></td>
+                                <td>15 Mundos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Maior Killstreak (Combo)</strong></td>
+                                <td>87 Inimigos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tempo Total de Jogo</strong></td>
+                                <td>34 horas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Chefes Derrotados</strong></td>
+                                <td>12 / 15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="account-tab-content" id="content-config">
+                <div class="wiki-box" style="max-width: 550px;">
+                    <h1>Configurações de Acesso</h1>
+                    <p>Atualize os dados de autenticação e segurança da sua conta.</p>
+                    
+                    <form action="atualizar_conta" method="post">
+                        <fieldset>
+                            <legend>Alterar Dados</legend>
+                            
+                            <div class="form-group">
+                                <label for="conf-nickname"><strong>Alterar Nickname:</strong></label>
+                                <input type="text" id="conf-nickname" name="nickname" value="Mael133" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="conf-email"><strong>Alterar Email:</strong></label>
+                                <input type="email" id="conf-email" name="email" value="mael@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="conf-senha"><strong>Nova Senha:</strong></label>
+                                <input type="password" id="conf-senha" name="senha" placeholder="Digite uma nova senha se quiser alterar...">
+                            </div>
+                            
+                            <div class="form-buttons button-center">
+                                <button class="wiki-button" type="submit">Salvar Alterações</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+
+            <section class="account-tab-content" id="content-guias">
+                <div class="wiki-box">
+                    <h1>Meus Guias Publicados</h1>
+                    <p>Gerencie, edite ou remova os guias da comunidade que você compartilhou na Wiki.</p>
+                    
+                    <table class="wiki-table">
+                        <thead>
+                            <tr>
+                                <th>Título do Guia</th>
+                                <th>Data de Envio</th>
+                                <th>Visualizações</th>
+                                <th style="text-align: center; width: 220px;">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Melhores Builds para o Early Game</strong></td>
+                                <td>28/05/2026</td>
+                                <td>1,245</td>
+                                <td style="text-align: center;">
+                                    <a href="editguide.html"><button class="action-btn edit-btn">Editar</button></a>
+                                    <button class="action-btn delete-btn">Deletar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Como quebrar o RNG de Itens Raros</strong></td>
+                                <td>15/04/2026</td>
+                                <td>3,890</td>
+                                <td style="text-align: center;">
+                                    <a href="editguide.html"><button class="action-btn edit-btn">Editar</button></a>
+                                    <button class="action-btn delete-btn">Deletar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Estratégia Avançada contra o Boss do Mundo 3</strong></td>
+                                <td>02/02/2026</td>
+                                <td>920</td>
+                                <td style="text-align: center;">
+                                    <a href="editguide.html"><button class="action-btn edit-btn">Editar</button></a>
+                                    <button class="action-btn delete-btn">Deletar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="account-tab-content" id="content-ranking">
+                <div class="wiki-box">
+                    <h1>Ranking Global Detalhado</h1>
+                    <p>Classificação geral dos melhores jogadores com base em pontuação, abates e conquistas mundiais.</p>
+                    
+                    <table class="wiki-table">
+                        <thead>
+                            <tr>
+                                <th>Posição</th>
+                                <th>Jogador</th>
+                                <th>Pontuação</th>
+                                <th>Mundos Concluídos</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-left: 4px solid #FFD700; background-color: rgba(255, 215, 0, 0.05);">
+                                <td>🥇 1º</td>
+                                <td><strong>Mael133</strong> (Você)</td>
+                                <td>95.400 pts</td>
+                                <td>15</td>
+                                <td style="color: #7bbf69;">Online</td>
+                            </tr>
+                            <tr style="border-left: 4px solid #C0C0C0;">
+                                <td>🥈 2º</td>
+                                <td>Boris</td>
+                                <td>88.150 pts</td>
+                                <td>14</td>
+                                <td style="color: rgba(255,255,255,0.4);">Offline</td>
+                            </tr>
+                            <tr style="border-left: 4px solid #CE8946;">
+                                <td>🥉 3º</td>
+                                <td>Tgzinx</td>
+                                <td>82.900 pts</td>
+                                <td>14</td>
+                                <td style="color: #7bbf69;">Online</td>
+                            </tr>
+                            <tr>
+                                <td>4º</td>
+                                <td>John Batista</td>
+                                <td>79.400 pts</td>
+                                <td>12</td>
+                                <td style="color: rgba(255,255,255,0.4);">Offline</td>
+                            </tr>
+                            <tr>
+                                <td>5º</td>
+                                <td>WashingtonDC</td>
+                                <td>71.200 pts</td>
+                                <td>11</td>
+                                <td style="color: #7bbf69;">Online</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+        <div class="wiki-guides-panel">
+            <div class="wiki-box" style="text-align: center;">
+                <h3>Status do Servidor</h3>
+                <p style="color: #7bbf69; font-weight: bold; margin-top: 10px;">ONLINE</p>
+                <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 5px;">Região: América do Sul</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

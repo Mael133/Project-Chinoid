@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Artigo - Project Chinoid</title>
+    <link rel="stylesheet" href="wiki.css">
+</head>
+<body class="wiki-body">
+<div class="wiki-container">
+    <header class="wiki-header">
+        <img class="wiki-logo" src="images/logo.png" alt="Project Chinoid Logo">
+    </header>
+
+    <nav class="wiki-sidebar-nav">
+        <div class="wiki-box">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="user.html">← Voltar ao Painel</a></li>
+                <li><a href="wiki.html">Início da Wiki</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="wiki-main-content">
+        <div class="wiki-box">
+            <h1>Editar Artigo</h1>
+            <p>Modifique as informações do seu guia publicado abaixo. Certifique-se de manter as diretrizes da comunidade.</p>
+            
+            <form action="salvar_edicao" method="post">
+                <fieldset>
+                    <legend>Alterar Conteúdo do Guia</legend>
+                    
+                    <div class="form-group">
+                        <label for="titulo"><strong>Título:</strong></label>
+                        <input type="text" id="titulo" name="titulo" value="Melhores Builds para o Early Game" placeholder="Título do guia aqui..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="artigo"><strong>Artigo:</strong></label>
+                        <textarea id="artigo" name="artigo" rows="10" placeholder="Escreva o guia aqui..." required>Neste guia, vamos analisar as melhores combinações de equipamentos e atributos para sobreviver com facilidade aos três primeiros mundos do Project Chinoid. 
+
+Foque em evoluir sua destreza e priorize a espada curta de bronze no início...</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="autor"><strong>Autor:</strong></label>
+                        <input type="text" id="autor" name="autor" value="Mael133" placeholder="Autor do guia aqui..." required>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button class="wiki-button" type="submit" style="margin-bottom: 5px; margin-left: 5px;">Salvar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <div class="wiki-guides-panel">
+        <div class="wiki-box" style="text-align: center;">
+            <h3>Dica de Edição</h3>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-top: 10px;">
+                Ao clicar em Salvar, as alterações serão aplicadas imediatamente na listagem pública da Wiki.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
