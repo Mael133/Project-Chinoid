@@ -61,16 +61,15 @@
     const forca = document.getElementById("Forca");
     const message = document.getElementById("PasswordMessage")
     const warnings = {
-            strengthStrings : ["","bruh...","fraca","média","FORTE!"],
+            strengthStrings : ["FORTE!","bruh...","fraca","média"],
 
             messages : ["","A senha precisa conter pelo menos 8 caracteres!",
             "A senha precisa conter um número!",
             "A senha precisa conter um caractere especial!",""],
 
-            colors : ["","color: red;",
+            colors : ["color: green","color: red;",
             "color: saddlebrown;",
-            "color: orange;",
-            "color: green;"]
+            "color: orange;"]
         }
 
     function validarSenhas() {
@@ -97,7 +96,7 @@
         }else if(!/[^A-Za-z0-9]/.test(passString)){ //special check
             strength = 3;
         }else{
-            strength = 4;
+            strength = 0;
         }
   
         message.textContent = warnings.messages[strength];
