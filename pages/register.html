@@ -54,59 +54,6 @@
         </div>
     </main>
 </div>
-<script src="../js/formvalidation.js"></script>
-<script>
-    const senha = document.getElementById("Senha");
-    const confirmarSenha = document.getElementById("Senharep");
-    const forca = document.getElementById("Forca");
-    const message = document.getElementById("PasswordMessage")
-    const warnings = {
-            strengthStrings : ["FORTE!","bruh...","fraca","média"],
-
-            messages : ["","A senha precisa conter pelo menos 8 caracteres!",
-            "A senha precisa conter um número!",
-            "A senha precisa conter um caractere especial!",""],
-
-            colors : ["color: green","color: red;",
-            "color: saddlebrown;",
-            "color: orange;"]
-        }
-    
-    function validarSenhas() {
-        let passString = senha.value.toString();
-
-        if(passString.length == 0){
-            forca.textContent = "-";
-            forca.style = "color: aliceblue;";
-            message.textContent = "";
-            message.style = "";
-            return
-        }
-
-        let passconfirmString = confirmarSenha.value.toString();
-
-        senha.setCustomValidity("");
-        confirmarSenha.setCustomValidity("");
-
-        let strength = checkPasswordStrength(passString);
-  
-        message.textContent = warnings.messages[strength];
-        message.style = warnings.colors[strength];
-        forca.textContent = warnings.strengthStrings[strength];
-        forca.style = warnings.colors[strength];
-
-        senha.setCustomValidity(warnings.messages[strength]);
-
-        if(senha.checkValidity() && passString !== passconfirmString){
-            message.textContent = "As senhas precisam ser iguais!";
-            message.style = "color: orange;";
-            confirmarSenha.setCustomValidity("As senhas precisam ser iguais!");
-        }
-    }
-
-    senha.addEventListener('input', validarSenhas);
-    confirmarSenha.addEventListener('keyup', validarSenhas);
-</script>
-
+<script src="../js/validateRegistration.js"></script>
 </body>
 </html>
