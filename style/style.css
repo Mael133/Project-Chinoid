@@ -23,7 +23,7 @@ body {
     "nav logo lead"
     "nav play lead";
 
-    background-image: url('images/menu-backgroud.jpeg');
+    background-image: url('../meta/menu-background.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
