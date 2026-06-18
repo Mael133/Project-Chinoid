@@ -3,11 +3,13 @@ const confirmarSenha = document.getElementById("Senharep");
 const forca = document.getElementById("Forca");
 const message = document.getElementById("PasswordMessage");
 const user = document.getElementById("Nickname");
+const mail = document.getElementById("Email");
 
 const maxPassLength = 32;
 const minPassLength = 8;
 const maxNicknameLength = 40;
 const minNicknameLength = 8;
+const maxMailLength = 256;
 const warnings = {
         strengthStrings : ["FORTE!","bruh...","fraca","média"],
 
@@ -21,6 +23,9 @@ const warnings = {
     }
 
 function validatePassword() {
+    senha.setCustomValidity("");
+    confirmarSenha.setCustomValidity("");
+
     let passString = senha.value.toString();
 
     if(passString.length == 0){
@@ -33,9 +38,6 @@ function validatePassword() {
 
     let passconfirmString = confirmarSenha.value.toString();
 
-    senha.setCustomValidity("");
-    confirmarSenha.setCustomValidity("");
-
     let strength = 0;
     
     if(passString.length < minPassLength){
@@ -46,46 +48,30 @@ function validatePassword() {
         strength = 3;
     }
 
+    validateLength(senha, minPassLength, maxPassLength);
+
     message.textContent = warnings.messages[strength];
     message.style = warnings.colors[strength];
     forca.textContent = warnings.strengthStrings[strength];
     forca.style = warnings.colors[strength];
 
     senha.setCustomValidity(warnings.messages[strength]);
+}
 
-    if(senha.checkValidity() && passString !== passconfirmString){
+function validatePassRepetition(){
+    if(senha.checkValidity() && senha.value !== confirmarSenha.value){
         message.textContent = "As senhas precisam ser iguais!";
         message.style = "color: orange;";
         confirmarSenha.setCustomValidity("As senhas precisam ser iguais!");
-    }
-    
-    if(passString.length > maxPassLength){
-        confirmarSenha.setCustomValidity(`A senha não pode ser maior que ${maxNicknameLength} caracteres!`)
-        message.textContent = `A senha não pode ser maior que ${maxNicknameLength} caracteres!`;
-        message.style = "color: red;";
-    }
-}
-
-function validateUser () {
-    let userString = user.value.toString();
-    if(userString.length == 0){
-        message.textContent = "";
-        message.style = "";
         return
     }
-    user.setCustomValidity("");
-    if(userString.length > maxNicknameLength){
-        user.setCustomValidity(`O nome de usuário não pode ser maior que ${maxNicknameLength} caracteres!`);
-        message.textContent = `O nome de usuário não pode ser maior que ${maxNicknameLength} caracteres!`;
-        message.style = "color: red;";
-        user
-    }else if(userString.length < minNicknameLength){
-        user.setCustomValidity(`O nome de usuário não pode ser menor que ${minNicknameLength} caracteres!`);
-        message.textContent = `O nome de usuário não pode ser menor que ${minNicknameLength} caracteres!`;
-        message.style = "color: red;";
-    }
+
+    confirmarSenha.setCustomValidity("");
+    message.textContent = "";
 }
 
 senha.addEventListener('input', validatePassword);
-confirmarSenha.addEventListener('input', validatePassword);
-user.addEventListener('input', validateUser);
+confirmarSenha.addEventListener('input', validatePassRepetition);
+user.addEventListener('input', () => validateLength(user, minNicknameLength, maxNicknameLength));
+mail.addEventListener('input', () => validateLength(mail, 0, maxMailLength));
+
